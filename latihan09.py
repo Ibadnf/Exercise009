@@ -25,23 +25,50 @@ personAndPets = [
 ]
 
 for x in personAndPets:
-	if x["name"] == "John Doe":
-		for p in x["pets"]:
-			print(p)
+	print(x)
 
+class PersonAndAnimal:
 
-class personPets:
-
-	def __init__(self, person=None, pets="Camel"):
+	def function(self, person, animal):
 		self.person = person
-		self.pets = pets
+		self.animal = animal
 
-	def getPetbyPerson(self):
+	def getNama(self):
 		for x in personAndPets:
-			if x["name"] == self.person:
-				for p in x["pets"]:
-					print(p)
+			print(x["name"])
+
+	def getAnimal(self):
+		for i in personAndPets:
+			print(i["pets"])
+
+	def printAnimalbyPerson(self):
+		for h in personAndPets:
+			if h["name"] == "John Doe":
+				for x in h["pets"]:
+					print(x)
+# belom terpecahkan:
+	def cetakPersonbyAnimal(self):
+		for o in personAndPets:
+			for b in o["pets"]:
+				if b == "Rooster":
+					print(o["name"])
 
 
-pp = personPets(person="Luke Skywalker")
-pp.getPetbyPerson()
+myObjectx = PersonAndAnimal()
+myObjectx.getNama()
+myObjectx.getAnimal()
+myObjectx.printAnimalbyPerson()
+myObjectx.cetakPersonbyAnimal()
+
+for x in personAndPets:
+	if x["name"] == "John Doe" or "Luke Skywalker" or "Padme Amidala":
+		print("True")
+	else:
+		print("False")
+
+for i in personAndPets:
+	if i["name"] == "John Doe" or "Luke Skywalker" or "Padme Amidala":
+		for v in i["pets"]:
+			print("ini binatang")
+	else:
+		print("False")
